@@ -1,10 +1,10 @@
 import "./App.css";
-import StarkHack from "./components/StarkHack";
+import ArgentXWallet from "./components/ArgentXWallet";
 
 function App() {
   return (
     <>
-      <StarkHack />
+      <ArgentXWallet />
     </>
   );
 }
