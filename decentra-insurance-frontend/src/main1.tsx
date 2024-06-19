@@ -19,12 +19,16 @@ import "./globals.css";
 import Login from "./components/ui/Login/Login";
 import DashboardHome from "./dashboard/components/DashboardHome";
 import Home from "./dashboard/components/Home";
+import PrivateRoute from "./dashboard/components/PrivateRoute";
+import Dashboard from "./dashboard/components/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<DashboardHome />}>
-      <Route index={true} path='/dashboard' element={<DashboardHome />} />
-      <Route path='/home' element={<Home />} />
+      <Route index={true} path='/dashboard' element={<Dashboard />} />
+      <Route path='' element={<PrivateRoute />}>
+        <Route path='/home' element={<Home />} />
+      </Route>
     </Route>
   )
 );
