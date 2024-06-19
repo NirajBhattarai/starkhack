@@ -17,8 +17,14 @@ import {
 import App from "./App";
 import "./globals.css";
 import Login from "./components/ui/Login/Login";
+import DashboardHome from "./dashboard/components/DashboardHome";
+import Dashboard from "./dashboard/components/Dashboard";
+import PrivateRoute from "./dashboard/components/PrivateRoute";
+import Home from "./dashboard/components/Home";
 
 const infuraKey = import.meta.env.VITE_INFURA_API_KEY;
+
+console.log(infuraKey)
 
 function Root({ children }: { children: React.ReactNode }) {
   const chains = [sepolia];
@@ -45,9 +51,12 @@ function Root({ children }: { children: React.ReactNode }) {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
-      <Route index={true} path='/' element={<App />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='*' element={<App />} />
+      <Route index element={<DashboardHome />} />
+      <Route path='/dashboard' element={<Dashboard />} />
+      <Route path='/signIn' element={<Login />} />
+      <Route path='' element={<PrivateRoute />}>
+        <Route path='/home' element={<Home />} />
+      </Route>
     </Route>
   )
 );

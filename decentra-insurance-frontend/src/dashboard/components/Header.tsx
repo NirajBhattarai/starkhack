@@ -15,6 +15,7 @@ import {
   Settings as SettingsIcon,
 } from "@mui/icons-material";
 import { alpha, styled } from "@mui/material/styles";
+import ConnectModal from "../../components/starknet/ConnectModal";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -89,6 +90,8 @@ function Header() {
           <IconButton size='large' edge='end' color='inherit'>
             <Avatar alt='Profile Picture' src='/static/images/avatar/1.jpg' />
           </IconButton>
+
+          <ConnectModal />
         </Box>
       </Toolbar>
     </AppBar>
