@@ -13,9 +13,12 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "root": true,
-  "rules": {},
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-undef": "warn"
+  },
   "settings": {
-  "react": {
+    "react": {
       "version": "detect"
     }
   }
