@@ -1,3 +1,4 @@
 [submodule "decentra_insurance_contract"]
 	path = decentra_insurance_contract
 	url = git@github.com:NirajBhattarai/decentra_insurance_contract.git
+	branch = main
