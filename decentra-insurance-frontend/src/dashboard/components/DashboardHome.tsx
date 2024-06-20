@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Outlet,
-} from "react-router-dom";
+import { BrowserRouter as Router, Outlet } from "react-router-dom";
 import { Box, CssBaseline } from "@mui/material";
-import Sidebar from "./Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 import Header from "./Header";
-import Home from "./Home";
 
 function App() {
   return (
@@ -17,7 +11,7 @@ function App() {
       <Sidebar />
       <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
         <Header />
-        <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
+        <Box component='main' sx={{ flexGrow: 1 }}>
           <Outlet />
         </Box>
       </Box>
